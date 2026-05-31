@@ -25,6 +25,7 @@ The core domain includes:
 * Projects
 * Applications
 * Assignment
+* Skill compatibility
 * Deliverables
 * Collaboration comments
 * Notifications
@@ -56,6 +57,8 @@ The domain intentionally excludes:
 | Assignment | The selection of one contributor for one project. |
 | Deliverable | A required or optional unit of work used to determine project progress and completion. |
 | Deliverable Submission | A contributor's submitted work metadata for a deliverable. |
+| Deliverable Review | The NGO review decision for a submitted deliverable attempt. |
+| Compatibility Assessment | A core SkillMatch assessment that derives project fit from contributor and project skill information, exposed to users as simple labels. |
 | Collaboration Comment | A contextual, append-only communication record tied to a project or deliverable. |
 | Notification | A recipient-specific awareness item tied to a relevant event or context. |
 | Certificate | Evidence that a contributor completed a valid SkillMatch project workflow. |
@@ -288,6 +291,18 @@ An Assignment is the result of the owning NGO selecting exactly one application 
 * NGOs may reject submitted applications before assignment.
 * Application rejection messages are optional in the MVP.
 
+### Assignment Record
+
+An Assignment may include:
+
+* Assigned project
+* Accepted application
+* Assigned contributor
+* Assigning NGO user or account
+* Assignment timestamp
+
+The Assignment may be implemented later as its own persistence record or as a relationship derived from the accepted Application and Project state. Conceptually, it must exist because project execution, deliverable submission, history, and certificate generation depend on knowing who was assigned and when.
+
 ### Assignment Invariants
 
 * Each Project may have only one assigned Contributor.
@@ -296,6 +311,35 @@ An Assignment is the result of the owning NGO selecting exactly one application 
 * The selected Application becomes Accepted.
 * Other submitted Applications become Not Selected.
 * Assignment must not be automated by compatibility matching.
+
+---
+
+## Compatibility Assessment Model
+
+A Compatibility Assessment is a core SkillMatch concept that estimates fit between a Contributor and a Project from available skill information.
+
+The platform may calculate compatibility internally using numeric logic, but MVP users see simple labels rather than numeric percentages.
+
+It helps users understand visible alignment between a Contributor and a Project, but it is not evidence of ability, eligibility, ranking, or selection.
+
+### Compatibility Labels
+
+| Label | Meaning |
+| ----- | ------- |
+| High | Strong visible alignment between project skills and contributor skills. |
+| Medium | Some visible alignment, but not complete. |
+| Low | Limited visible alignment. |
+| Not enough information | Compatibility cannot be calculated reliably from available skills. |
+
+### Compatibility Assessment Invariants
+
+* Compatibility is derived from existing project, contributor, application, and catalog information.
+* Compatibility may use internal numeric calculation logic.
+* Compatibility may be calculated for submitted applications and contributor project views.
+* Compatibility must be exposed to MVP users as simple labels, not numeric percentages.
+* Compatibility must not automatically accept, reject, hide, block, or assign contributors.
+* Compatibility does not create activity records for normal viewing, recalculation, or sorting in the MVP.
+* Missing contributor skills or project skills must produce limited or unavailable compatibility, not workflow blockage.
 
 ---
 
@@ -498,6 +542,8 @@ Administrative Actions may affect accounts, NGOs, projects, comments, skills, ce
 | Contributor | may be assigned to many | Projects |
 | Assigned Contributor | submits | Deliverable Submissions |
 | Deliverable | has many | Submissions over time |
+| Deliverable Submission | may have one | Deliverable Review |
+| Compatibility Assessment | is derived from | Project, Contributor Profile, Application, and Skill data |
 | Project or Deliverable | has many | Collaboration Comments |
 | Account | receives many | Notifications |
 | Completed Project | generates | Certificate |
@@ -506,6 +552,7 @@ Administrative Actions may affect accounts, NGOs, projects, comments, skills, ce
 | Workflow event | may create | Activity Record |
 | Workflow event | may create | Notification |
 | Administrator | performs | Administrative Action |
+| Administrative Action | may create | Activity Record and Notification |
 
 ---
 
@@ -521,7 +568,7 @@ The following invariants apply across the domain:
 * Project completion depends only on mandatory Deliverables.
 * Skills are centrally managed by administrators.
 * Contributor skills and project skills are optional but must come from the catalog when selected.
-* Matching is assistive and must not automate assignment or block applications.
+* Compatibility assessment is assistive and must not automate assignment or block applications.
 * Communication remains contextual to projects, deliverables, applications, notifications, and platform events.
 * SkillMatch stores collaboration metadata, not project files.
 * Critical workflow decisions require human action.
