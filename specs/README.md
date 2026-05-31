@@ -48,7 +48,7 @@ The functional requirements document is split into focused module files under `f
 | Project Discovery | `functional-requirements/09-project-discovery.md` | ✅ Drafted, no open questions |
 | Skill Matching | `functional-requirements/10-skill-matching.md` | ✅ Drafted, no open questions |
 | Collaboration Comments | `functional-requirements/11-collaboration-comments.md` | ✅ Drafted, no open questions |
-| Notifications | TBD | ⏳ Pending |
+| Notifications | `functional-requirements/12-notifications.md` | ✅ Drafted, no open questions |
 | Certificates | TBD | ⏳ Pending |
 | Administration And Moderation | TBD | ⏳ Pending |
 
@@ -143,7 +143,8 @@ specs/
 │   ├── 08-skills-catalog.md
 │   ├── 09-project-discovery.md
 │   ├── 10-skill-matching.md
-│   └── 11-collaboration-comments.md
+│   ├── 11-collaboration-comments.md
+│   └── 12-notifications.md
 ├── 04-domain-model.md
 ├── 05-user-flows.md
 ├── 06-ui-structure.md

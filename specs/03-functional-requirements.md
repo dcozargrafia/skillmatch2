@@ -88,7 +88,7 @@ This rule helps keep notifications useful while preserving accountability and tr
 | Project Discovery | Drafted, no open questions | `functional-requirements/09-project-discovery.md` |
 | Skill Matching | Drafted, no open questions | `functional-requirements/10-skill-matching.md` |
 | Collaboration Comments | Drafted, no open questions | `functional-requirements/11-collaboration-comments.md` |
-| Notifications | Pending | TBD |
+| Notifications | Drafted, no open questions | `functional-requirements/12-notifications.md` |
 | Certificates | Pending | TBD |
 | Administration And Moderation | Pending | TBD |
 
