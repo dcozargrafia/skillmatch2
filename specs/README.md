@@ -24,7 +24,7 @@ The specification is the source of truth for all product, design, architecture, 
 | 07-api-spec.md                    | ✅ Complete |
 | 08-data-model.md                  | ✅ Complete |
 | 09-architecture.md                | ✅ Complete |
-| 10-non-functional-requirements.md | ⏳ Pending  |
+| 10-non-functional-requirements.md | ✅ Complete |
 | 11-sdd-execution-plan.md          | ⏳ Pending  |
 | ADRs                              | ⏳ Pending  |
 
