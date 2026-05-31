@@ -44,7 +44,7 @@ Advanced matching inputs such as availability, workload, previous project histor
 
 ---
 
-## Compatibility Score Rules
+## Compatibility Label Rules
 
 SkillMatch may calculate compatibility for submitted applications.
 
@@ -77,7 +77,7 @@ The MVP may rank applicants by compatibility to help NGOs review applications.
 
 Applicant ranking must remain assistive.
 
-NGOs must be able to review applications regardless of score.
+NGOs must be able to review applications regardless of compatibility label.
 
 A low or unavailable compatibility label must not automatically reject an application.
 

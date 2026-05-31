@@ -103,9 +103,8 @@ NGOs can:
 * Define required skills for projects.
 * Define project deliverables.
 * View applications submitted to their own projects.
-* Reject applications submitted to their own projects.
 * View contributor profiles for applicants to their own projects.
-* View SkillMatch compatibility scores for applicants.
+* View SkillMatch compatibility labels for applicants.
 * Assign one contributor to a project.
 * View projects owned by their NGO.
 * Add comments to their own projects and deliverables.
@@ -264,19 +263,18 @@ Administrative access should be limited to operational needs and platform govern
 | View public projects    |   ✓   |      ✓      |  ✓  |   ✓   |
 | Register account        |   ✓   |      -      |  -  |   -   |
 | Edit own profile        |   -   |      ✓      |  ✓  |   ✓   |
-| Create project          |   -   |      -      |  ✓  |   ✓   |
-| Publish project         |   -   |      -      |  ✓* |   ✓   |
+| Create project          |   -   |      -      |  ✓  |   -   |
+| Publish project         |   -   |      -      |  ✓* |   -   |
 | Apply to project        |   -   |      ✓      |  -  |   -   |
 | Withdraw application    |   -   |      ✓      |  -  |   -   |
-| View own applications   |   -   |      ✓      |  -  |   ✓   |
-| View project applicants |   -   |      -      | ✓** |   ✓   |
-| Reject application      |   -   |      -      | ✓** |   ✓   |
-| Assign contributor      |   -   |      -      | ✓** |   ✓   |
-| Submit deliverable      |   -   |     ✓***    |  -  |   ✓   |
-| Approve deliverable     |   -   |      -      | ✓** |   ✓   |
-| Reject deliverable      |   -   |      -      | ✓** |   ✓   |
-| View own certificates   |   -   |      ✓      |  ✓  |   ✓   |
-| Download certificates   |   -   |      ✓      |  ✓  |   ✓   |
+| View applications        |   -   |    Own      | ✓** |   ✓†  |
+| View project applicants |   -   |      -      | ✓** |   ✓†  |
+| Assign contributor      |   -   |      -      | ✓** |   -   |
+| Submit deliverable      |   -   |     ✓***    |  -  |   -   |
+| Approve deliverable     |   -   |      -      | ✓** |   -   |
+| Reject deliverable      |   -   |      -      | ✓** |   -   |
+| View certificate records |   -   |    Own      | ✓** |   ✓†  |
+| Download own certificates |  -   |      ✓      |  -  |   -   |
 | Manage skills catalog   |   -   |      -      |  -  |   ✓   |
 | Verify NGOs             |   -   |      -      |  -  |   ✓   |
 | Moderate users          |   -   |      -      |  -  |   ✓   |
@@ -287,3 +285,5 @@ Administrative access should be limited to operational needs and platform govern
 ** Only for projects owned by the NGO.
 
 *** Only for projects assigned to the contributor.
+
+† Administrative visibility only for governance, moderation, support, or operational integrity. Admins are not normal workflow participants.

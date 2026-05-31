@@ -1,5 +1,7 @@
 # SkillMatch
 
+[Español](README.es.md)
+
 SkillMatch is an open-source platform that connects people with digital skills and nonprofit organizations through focused technology micro-projects.
 
 The project is currently in the specification phase. The specification is the source of truth until implementation begins.
@@ -60,6 +62,7 @@ SkillMatch is intentionally not:
 - A consulting platform
 - A project management suite
 - A general-purpose messaging platform
+- A file hosting platform
 
 The product stays focused on structured collaboration between digital contributors and NGOs.
 
@@ -67,7 +70,7 @@ The product stays focused on structured collaboration between digital contributo
 
 ## Current status
 
-The project has completed the functional requirements draft and is ready to move into domain modeling.
+The project has completed the product, functional, domain, user-flow, and UI-structure specification areas.
 
 Completed specification areas:
 
@@ -75,12 +78,12 @@ Completed specification areas:
 - Scope and MVP definition
 - Roles and permissions
 - Functional requirements modules
-
-Next specification area:
-
 - Domain model
 - User flows
 - UI structure
+
+Next specification areas:
+
 - API specification
 - Data model
 - Architecture
@@ -114,6 +117,15 @@ specs/
 │   ├── 12-notifications.md
 │   ├── 13-certificates.md
 │   └── 14-administration-and-moderation.md
+├── 04-domain-model.md
+├── 05-user-flows.md
+├── 06-ui-structure.md
+├── 07-api-spec.md
+├── 08-data-model.md
+├── 09-architecture.md
+├── 10-non-functional-requirements.md
+├── 11-sdd-execution-plan.md
+├── adr/
 └── README.md
 ```
 

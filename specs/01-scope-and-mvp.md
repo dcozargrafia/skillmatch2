@@ -193,14 +193,13 @@ The MVP must support the complete lifecycle of a collaboration between a contrib
 * Withdraw application
 * View submitted applications
 * NGO application review
-* Reject application
 
 ---
 
 ## Skill Matching
 
-* Calculate compatibility score
-* Display compatibility score
+* Calculate compatibility assessment
+* Display compatibility labels
 * Rank applicants by compatibility
 
 ---
@@ -314,7 +313,7 @@ Public profiles should be opt-in and privacy-aware.
 
 ## Advanced Matching
 
-Improve the compatibility score beyond basic skill matching.
+Improve Compatibility Assessment beyond basic skill matching.
 
 Possible factors:
 
