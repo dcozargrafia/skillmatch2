@@ -64,8 +64,8 @@ Contributors should be notified when important events affect their applications,
 
 Contributor notifications may include:
 
-* Their application is submitted, rejected, accepted, or marked not selected.
 * They are selected for a project.
+* Their application is marked not selected because another contributor was assigned.
 * A project they applied to has material information changed before assignment.
 * An assigned project is archived or completed.
 * A deliverable they submitted is approved or rejected.

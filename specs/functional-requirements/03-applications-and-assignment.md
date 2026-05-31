@@ -68,7 +68,6 @@ Applications should move through a simple lifecycle.
 | Submitted | The contributor has applied and the application awaits NGO review. |
 | Withdrawn | The contributor withdrew the application before assignment. |
 | Accepted | The NGO selected this contributor and the project moved to in progress. |
-| Rejected | The NGO rejected the application before assigning a contributor. |
 | Not Selected | The NGO selected another contributor for the project. |
 
 ---
@@ -109,20 +108,6 @@ Accepted applications:
 * Must notify the selected contributor.
 * Must remain part of project and contributor history.
 
-### Rejected
-
-A submitted application may be rejected by the owning NGO before the project is assigned.
-
-Rejected applications:
-
-* Must notify the applicant contributor.
-* Must remain visible in the contributor's own application history.
-* Must remain visible to the owning NGO as historical application activity.
-* Must not be considered active for assignment.
-* May include an optional rejection message from the NGO.
-
-Rejection messages are optional for applications in the MVP. Unlike deliverable rejection feedback, application rejection messages are not required because they are not needed to unblock project work.
-
 ### Not Selected
 
 Applications become not selected when another contributor is assigned to the project.
@@ -141,7 +126,6 @@ Not-selected applications:
 | From | To | Trigger |
 | ---- | -- | ------- |
 | Submitted | Withdrawn | Contributor withdraws before project assignment. |
-| Submitted | Rejected | NGO rejects the application before assignment. |
 | Submitted | Accepted | NGO selects the contributor for the project. |
 | Submitted | Not Selected | NGO selects a different contributor for the project. |
 | Withdrawn | Submitted | Contributor applies again while the project remains published. |
@@ -154,7 +138,7 @@ Each project may have only one assigned contributor.
 
 An NGO may assign a contributor only from submitted applications to its own published project.
 
-An NGO may reject individual submitted applications before assigning a contributor.
+The MVP does not support manual individual application rejection before assignment. Applications that are not selected remain submitted until the contributor withdraws or the project is assigned to another contributor.
 
 When an NGO assigns a contributor:
 
@@ -207,7 +191,6 @@ Activity history should include events such as:
 
 * Application submitted.
 * Application withdrawn.
-* Application rejected.
 * Application accepted.
 * Application marked as not selected.
 * Project assigned to a contributor.
@@ -222,7 +205,6 @@ The platform should notify relevant users when:
 
 * A contributor submits an application, so the owning NGO can review it.
 * A contributor withdraws an application, so the owning NGO knows it is no longer active.
-* A contributor's application is rejected, so the contributor knows the outcome.
 * A contributor is accepted for a project, so the contributor knows the project has started.
 * A contributor is not selected because another contributor was assigned, so the contributor knows the outcome.
 * A project the contributor applied to receives material changes before assignment, so the contributor can reassess the opportunity.
@@ -243,8 +225,7 @@ Applications and assignment must respect the following constraints:
 * Only the owning NGO may assign a contributor during normal workflow.
 * A contributor may have only one active submitted application per project.
 * Application messages are required.
-* NGOs may reject individual applications before assignment.
-* Application rejection messages are optional during the MVP.
+* Manual individual application rejection is not supported in the MVP.
 * A project can have only one accepted application.
 * Assignment immediately starts the project.
 * Non-selected applicants must be notified.

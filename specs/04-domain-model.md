@@ -278,7 +278,6 @@ An Assignment is the result of the owning NGO selecting exactly one application 
 | Submitted | The contributor applied and awaits NGO decision. |
 | Withdrawn | The contributor withdrew before assignment. |
 | Accepted | The NGO selected this contributor and the project moved to in progress. |
-| Rejected | The NGO rejected the application before assigning a contributor. |
 | Not Selected | Another contributor was assigned to the project. |
 
 ### Application Invariants
@@ -288,8 +287,8 @@ An Assignment is the result of the owning NGO selecting exactly one application 
 * Application messages are required in the MVP.
 * Contributors may withdraw before assignment.
 * Contributors may reapply after withdrawal while the project remains published.
-* NGOs may reject submitted applications before assignment.
-* Application rejection messages are optional in the MVP.
+* Applications that are not accepted remain Submitted until withdrawn or marked Not Selected by assignment.
+* Manual individual application rejection is not supported in the MVP.
 
 ### Assignment Record
 
