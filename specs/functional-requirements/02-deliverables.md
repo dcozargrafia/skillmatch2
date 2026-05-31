@@ -32,12 +32,15 @@ Projects may also define optional deliverables.
 
 Each deliverable should include enough information for contributors to understand what must be produced.
 
-At minimum, a deliverable should include:
+At minimum, a deliverable definition should include:
 
 * Title
 * Description
 * Requirement type, either mandatory or optional
-* Review status
+
+A deliverable also has a review status that represents where it is in the delivery workflow.
+
+The definition explains what must be produced. The status explains what has happened to it.
 
 Mandatory deliverables define the minimum work required for project completion.
 
@@ -192,6 +195,8 @@ Deliverables must respect the following constraints:
 * Deliverables cannot be submitted after a project is completed or archived.
 * All mandatory deliverables must be approved for project completion.
 * Optional deliverables do not need to be approved for project completion.
+* Deliverable definitions must include title, description, and requirement type.
+* Deliverable review status belongs to the workflow state, not the definition itself.
 * Deliverable submissions must use comments and optional external URLs rather than uploaded files.
 
 ---

@@ -32,6 +32,7 @@ At minimum, a contributor profile should support:
 
 * Display name
 * Biography or short introduction
+* Website or portfolio URL, optional
 * Skills selected from the centralized skills catalog, when applicable
 * Skill proficiency levels for selected skills
 * Availability information
@@ -39,7 +40,9 @@ At minimum, a contributor profile should support:
 
 The MVP should avoid collecting unnecessary personal, academic, employment, or credential information.
 
-Formal credentials, degrees, certifications, employment history, and portfolio-style résumé fields are Post-MVP unless explicitly introduced later.
+A single optional website or portfolio URL may be used to help NGOs understand a contributor's work context.
+
+Formal credentials, degrees, certifications, employment history, and structured portfolio-style résumé fields are Post-MVP unless explicitly introduced later.
 
 ---
 
@@ -203,6 +206,7 @@ Contributor profiles must respect the following constraints:
 * NGOs can view contributor profiles only in relevant application or assignment contexts.
 * Profile edits must not rewrite historical workflow records.
 * Public contributor profiles are not part of the MVP unless explicitly introduced later.
+* Optional website or portfolio URLs may provide context but must not turn the profile into a résumé or credential system.
 * Profiles must support skills-based contribution, not credential-based hiring.
 * Contributor profiles must not turn SkillMatch into a job marketplace, freelance marketplace, or social network.
 
