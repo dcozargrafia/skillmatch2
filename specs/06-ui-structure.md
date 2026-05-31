@@ -146,6 +146,7 @@ The Admin Area supports exceptional governance and platform operation without re
 | NGO Verification Review | Approve or reject NGO verification requests with feedback. |
 | NGO Governance | Restrict or restore NGOs and review relevant NGO/project context. |
 | Account Governance | Disable or restore accounts for clear administrative reasons. |
+| Contributor Governance | List and inspect contributor accounts and profiles for governance, moderation, support, or operational integrity. |
 | Project Moderation | Hide, archive, or correct projects for governance reasons. |
 | Comment Moderation | Hide or flag comments while preserving accountability. |
 | Skills Catalog Management | Create, update, disable, restore, or archive skills and categories. |
@@ -157,6 +158,7 @@ The Admin Area supports exceptional governance and platform operation without re
 
 * Administrators are governance operators, not normal workflow participants.
 * Admin UI must require reasons for actions that affect access, publication, discovery, moderation, certificates, or historical records.
+* Admin contributor lists must not become a public contributor directory, talent search, or CRM.
 * Admin UI must not encourage administrators to assign contributors, approve deliverables, complete projects, or generate certificates during normal operation.
 * Administrative visibility should follow least privilege where possible.
 * Administrative actions must preserve history.
@@ -207,6 +209,7 @@ Admin navigation should emphasize:
 * Dashboard
 * Verification Requests
 * Users / Accounts
+* Contributors
 * NGOs
 * Projects
 * Skills Catalog

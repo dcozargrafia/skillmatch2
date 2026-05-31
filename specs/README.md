@@ -21,7 +21,7 @@ The specification is the source of truth for all product, design, architecture, 
 | 04-domain-model.md                | ✅ Complete |
 | 05-user-flows.md                  | ✅ Complete |
 | 06-ui-structure.md                | ✅ Complete |
-| 07-api-spec.md                    | ⏳ Pending  |
+| 07-api-spec.md                    | ✅ Complete |
 | 08-data-model.md                  | ⏳ Pending  |
 | 09-architecture.md                | ⏳ Pending  |
 | 10-non-functional-requirements.md | ⏳ Pending  |
