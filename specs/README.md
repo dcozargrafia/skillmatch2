@@ -49,8 +49,8 @@ The functional requirements document is split into focused module files under `f
 | Skill Matching | `functional-requirements/10-skill-matching.md` | ✅ Drafted, no open questions |
 | Collaboration Comments | `functional-requirements/11-collaboration-comments.md` | ✅ Drafted, no open questions |
 | Notifications | `functional-requirements/12-notifications.md` | ✅ Drafted, no open questions |
-| Certificates | TBD | ⏳ Pending |
-| Administration And Moderation | TBD | ⏳ Pending |
+| Certificates | `functional-requirements/13-certificates.md` | ✅ Drafted, no open questions |
+| Administration And Moderation | `functional-requirements/14-administration-and-moderation.md` | ✅ Drafted, no open questions |
 
 `03-functional-requirements.md` should remain the index for this phase. Module-level tracking should stay here unless the tracker becomes too large to review comfortably.
 
@@ -144,7 +144,9 @@ specs/
 │   ├── 09-project-discovery.md
 │   ├── 10-skill-matching.md
 │   ├── 11-collaboration-comments.md
-│   └── 12-notifications.md
+│   ├── 12-notifications.md
+│   ├── 13-certificates.md
+│   └── 14-administration-and-moderation.md
 ├── 04-domain-model.md
 ├── 05-user-flows.md
 ├── 06-ui-structure.md
