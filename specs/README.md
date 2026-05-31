@@ -45,9 +45,9 @@ The functional requirements document is split into focused module files under `f
 | Contributor Profiles | `functional-requirements/06-contributor-profiles.md` | ✅ Drafted, no open questions |
 | NGO Profiles | `functional-requirements/07-ngo-profiles.md` | ✅ Drafted, no open questions |
 | Skills Catalog | `functional-requirements/08-skills-catalog.md` | ✅ Drafted, no open questions |
-| Project Discovery | TBD | ⏳ Pending |
-| Skill Matching | TBD | ⏳ Pending |
-| Collaboration Comments | TBD | ⏳ Pending |
+| Project Discovery | `functional-requirements/09-project-discovery.md` | ✅ Drafted, no open questions |
+| Skill Matching | `functional-requirements/10-skill-matching.md` | ✅ Drafted, no open questions |
+| Collaboration Comments | `functional-requirements/11-collaboration-comments.md` | ✅ Drafted, no open questions |
 | Notifications | TBD | ⏳ Pending |
 | Certificates | TBD | ⏳ Pending |
 | Administration And Moderation | TBD | ⏳ Pending |
@@ -140,7 +140,10 @@ specs/
 │   ├── 05-authentication-and-accounts.md
 │   ├── 06-contributor-profiles.md
 │   ├── 07-ngo-profiles.md
-│   └── 08-skills-catalog.md
+│   ├── 08-skills-catalog.md
+│   ├── 09-project-discovery.md
+│   ├── 10-skill-matching.md
+│   └── 11-collaboration-comments.md
 ├── 04-domain-model.md
 ├── 05-user-flows.md
 ├── 06-ui-structure.md

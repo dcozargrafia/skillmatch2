@@ -29,7 +29,7 @@ At minimum, a project should include:
 * Title
 * Description
 * Owning NGO
-* Required skills
+* Required skills, when defined
 * Mandatory and optional deliverables
 * Estimated effort
 * Target completion date

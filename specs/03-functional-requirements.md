@@ -85,9 +85,9 @@ This rule helps keep notifications useful while preserving accountability and tr
 | Contributor Profiles | Drafted, no open questions | `functional-requirements/06-contributor-profiles.md` |
 | NGO Profiles | Drafted, no open questions | `functional-requirements/07-ngo-profiles.md` |
 | Skills Catalog | Drafted, no open questions | `functional-requirements/08-skills-catalog.md` |
-| Project Discovery | Pending | TBD |
-| Skill Matching | Pending | TBD |
-| Collaboration Comments | Pending | TBD |
+| Project Discovery | Drafted, no open questions | `functional-requirements/09-project-discovery.md` |
+| Skill Matching | Drafted, no open questions | `functional-requirements/10-skill-matching.md` |
+| Collaboration Comments | Drafted, no open questions | `functional-requirements/11-collaboration-comments.md` |
 | Notifications | Pending | TBD |
 | Certificates | Pending | TBD |
 | Administration And Moderation | Pending | TBD |
