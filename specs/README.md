@@ -17,7 +17,7 @@ The specification is the source of truth for all product, design, architecture, 
 | 00-product-brief.md               | ✅ Complete |
 | 01-scope-and-mvp.md               | ✅ Complete |
 | 02-roles-and-permissions.md       | ✅ Complete |
-| 03-functional-requirements.md     | 🟡 In Progress |
+| 03-functional-requirements.md     | ✅ Complete |
 | 04-domain-model.md                | ⏳ Pending  |
 | 05-user-flows.md                  | ⏳ Pending  |
 | 06-ui-structure.md                | ⏳ Pending  |

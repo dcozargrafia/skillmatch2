@@ -246,6 +246,26 @@ Email notifications are Post-MVP unless explicitly introduced later.
 
 ---
 
+## Constraints
+
+Project Lifecycle must respect the following constraints:
+
+* Each project is owned by exactly one NGO.
+* Only verified NGOs may publish projects.
+* Draft projects are not publicly visible and cannot receive applications.
+* Published projects are visible in public discovery and may receive applications.
+* Each project may be assigned to only one contributor.
+* Assignment immediately moves a project to in progress.
+* In-progress projects must stop accepting new applications.
+* Project completion requires approval of all mandatory deliverables.
+* Optional deliverables do not block project completion.
+* Completed projects may remain publicly visible but must not appear in default active discovery.
+* Archived projects must not accept applications or deliverable submissions.
+* Project history, applications, comments, submissions, and collaboration records must be preserved when projects advance, complete, or are archived.
+* Project lifecycle behavior must remain focused on micro-project collaboration and must not become full project-management workflow.
+
+---
+
 ## Open Questions
 
 The following decisions must be resolved before this section is considered complete:
