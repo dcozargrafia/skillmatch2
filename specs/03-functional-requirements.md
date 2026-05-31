@@ -80,10 +80,10 @@ This rule helps keep notifications useful while preserving accountability and tr
 | Project Lifecycle | Drafted, no open questions | `functional-requirements/01-project-lifecycle.md` |
 | Deliverables | Drafted, no open questions | `functional-requirements/02-deliverables.md` |
 | Applications And Assignment | Drafted, no open questions | `functional-requirements/03-applications-and-assignment.md` |
-| Authentication And Accounts | Pending | TBD |
+| NGO Verification | Drafted, no open questions | `functional-requirements/04-ngo-verification.md` |
+| Authentication And Accounts | Drafted, no open questions | `functional-requirements/05-authentication-and-accounts.md` |
 | Contributor Profiles | Pending | TBD |
 | NGO Profiles | Pending | TBD |
-| NGO Verification | Drafted, no open questions | `functional-requirements/04-ngo-verification.md` |
 | Skills Catalog | Pending | TBD |
 | Project Discovery | Pending | TBD |
 | Skill Matching | Pending | TBD |

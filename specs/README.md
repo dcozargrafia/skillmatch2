@@ -41,7 +41,7 @@ The functional requirements document is split into focused module files under `f
 | Deliverables | `functional-requirements/02-deliverables.md` | ✅ Drafted, no open questions |
 | Applications And Assignment | `functional-requirements/03-applications-and-assignment.md` | ✅ Drafted, no open questions |
 | NGO Verification | `functional-requirements/04-ngo-verification.md` | ✅ Drafted, no open questions |
-| Authentication And Accounts | TBD | ⏳ Pending |
+| Authentication And Accounts | `functional-requirements/05-authentication-and-accounts.md` | ✅ Drafted, no open questions |
 | Contributor Profiles | TBD | ⏳ Pending |
 | NGO Profiles | TBD | ⏳ Pending |
 | Skills Catalog | TBD | ⏳ Pending |
@@ -136,7 +136,8 @@ specs/
 │   ├── 01-project-lifecycle.md
 │   ├── 02-deliverables.md
 │   ├── 03-applications-and-assignment.md
-│   └── 04-ngo-verification.md
+│   ├── 04-ngo-verification.md
+│   └── 05-authentication-and-accounts.md
 ├── 04-domain-model.md
 ├── 05-user-flows.md
 ├── 06-ui-structure.md
