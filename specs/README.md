@@ -43,8 +43,8 @@ The functional requirements document is split into focused module files under `f
 | NGO Verification | `functional-requirements/04-ngo-verification.md` | ✅ Drafted, no open questions |
 | Authentication And Accounts | `functional-requirements/05-authentication-and-accounts.md` | ✅ Drafted, no open questions |
 | Contributor Profiles | `functional-requirements/06-contributor-profiles.md` | ✅ Drafted, no open questions |
-| NGO Profiles | TBD | ⏳ Pending |
-| Skills Catalog | TBD | ⏳ Pending |
+| NGO Profiles | `functional-requirements/07-ngo-profiles.md` | ✅ Drafted, no open questions |
+| Skills Catalog | `functional-requirements/08-skills-catalog.md` | ✅ Drafted, no open questions |
 | Project Discovery | TBD | ⏳ Pending |
 | Skill Matching | TBD | ⏳ Pending |
 | Collaboration Comments | TBD | ⏳ Pending |
@@ -138,7 +138,9 @@ specs/
 │   ├── 03-applications-and-assignment.md
 │   ├── 04-ngo-verification.md
 │   ├── 05-authentication-and-accounts.md
-│   └── 06-contributor-profiles.md
+│   ├── 06-contributor-profiles.md
+│   ├── 07-ngo-profiles.md
+│   └── 08-skills-catalog.md
 ├── 04-domain-model.md
 ├── 05-user-flows.md
 ├── 06-ui-structure.md

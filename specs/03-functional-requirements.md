@@ -83,8 +83,8 @@ This rule helps keep notifications useful while preserving accountability and tr
 | NGO Verification | Drafted, no open questions | `functional-requirements/04-ngo-verification.md` |
 | Authentication And Accounts | Drafted, no open questions | `functional-requirements/05-authentication-and-accounts.md` |
 | Contributor Profiles | Drafted, no open questions | `functional-requirements/06-contributor-profiles.md` |
-| NGO Profiles | Pending | TBD |
-| Skills Catalog | Pending | TBD |
+| NGO Profiles | Drafted, no open questions | `functional-requirements/07-ngo-profiles.md` |
+| Skills Catalog | Drafted, no open questions | `functional-requirements/08-skills-catalog.md` |
 | Project Discovery | Pending | TBD |
 | Skill Matching | Pending | TBD |
 | Collaboration Comments | Pending | TBD |
