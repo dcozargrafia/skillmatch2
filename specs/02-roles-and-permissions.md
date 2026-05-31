@@ -103,6 +103,7 @@ NGOs can:
 * Define required skills for projects.
 * Define project deliverables.
 * View applications submitted to their own projects.
+* Reject applications submitted to their own projects.
 * View contributor profiles for applicants to their own projects.
 * View SkillMatch compatibility scores for applicants.
 * Assign one contributor to a project.
@@ -111,7 +112,7 @@ NGOs can:
 * Review submitted deliverables.
 * Approve deliverables.
 * Reject deliverables with feedback.
-* Mark projects as completed when all deliverables are approved.
+* Mark projects as completed when all mandatory deliverables are approved.
 * View certificates generated for their completed projects.
 * Receive platform notifications.
 
@@ -153,6 +154,32 @@ Administrators cannot:
 * Represent an NGO unless using a separate NGO account.
 * Modify project outcomes without a clear administrative reason.
 * Bypass the core collaboration workflow for normal project completion.
+
+### Administrator Workflow Boundaries
+
+Administrators are governance operators, not normal workflow participants.
+
+Administrators may intervene when necessary to protect platform safety, quality, trust, or operational integrity.
+
+Administrative intervention is allowed for cases such as:
+
+* Moderating inappropriate, fraudulent, abusive, or suspicious activity.
+* Hiding, restricting, or archiving projects that violate platform rules.
+* Managing NGO verification status.
+* Managing users, NGOs, projects, skills, and platform activity for governance purposes.
+* Correcting operational errors when a clear administrative reason exists.
+
+Administrative intervention must not replace the normal collaboration workflow.
+
+During normal operation:
+
+* NGOs select contributors for their own projects.
+* Contributors submit deliverables for assigned projects.
+* NGOs approve or reject submitted deliverables.
+* Projects are completed through the standard mandatory deliverable approval flow.
+* Certificates are generated only from valid project completion.
+
+Administrators should not assign contributors, approve deliverables, complete projects, or generate certificates on behalf of users unless there is a clear administrative reason.
 
 ## Visibility Rules
 
@@ -243,6 +270,7 @@ Administrative access should be limited to operational needs and platform govern
 | Withdraw application    |   -   |      ✓      |  -  |   -   |
 | View own applications   |   -   |      ✓      |  -  |   ✓   |
 | View project applicants |   -   |      -      | ✓** |   ✓   |
+| Reject application      |   -   |      -      | ✓** |   ✓   |
 | Assign contributor      |   -   |      -      | ✓** |   ✓   |
 | Submit deliverable      |   -   |     ✓***    |  -  |   ✓   |
 | Approve deliverable     |   -   |      -      | ✓** |   ✓   |

@@ -17,7 +17,7 @@ The specification is the source of truth for all product, design, architecture, 
 | 00-product-brief.md               | ✅ Complete |
 | 01-scope-and-mvp.md               | ✅ Complete |
 | 02-roles-and-permissions.md       | ✅ Complete |
-| 03-functional-requirements.md     | ⏳ Pending  |
+| 03-functional-requirements.md     | 🟡 In Progress |
 | 04-domain-model.md                | ⏳ Pending  |
 | 05-user-flows.md                  | ⏳ Pending  |
 | 06-ui-structure.md                | ⏳ Pending  |
@@ -27,6 +27,32 @@ The specification is the source of truth for all product, design, architecture, 
 | 10-non-functional-requirements.md | ⏳ Pending  |
 | 11-sdd-execution-plan.md          | ⏳ Pending  |
 | ADRs                              | ⏳ Pending  |
+
+---
+
+
+## Functional Requirements Module Tracker
+
+The functional requirements document is split into focused module files under `functional-requirements/`.
+
+| Module | Document | Status |
+| ------ | -------- | ------ |
+| Project Lifecycle | `functional-requirements/01-project-lifecycle.md` | ✅ Drafted, no open questions |
+| Deliverables | `functional-requirements/02-deliverables.md` | ✅ Drafted, no open questions |
+| Applications And Assignment | `functional-requirements/03-applications-and-assignment.md` | ✅ Drafted, no open questions |
+| NGO Verification | `functional-requirements/04-ngo-verification.md` | ✅ Drafted, no open questions |
+| Authentication And Accounts | TBD | ⏳ Pending |
+| Contributor Profiles | TBD | ⏳ Pending |
+| NGO Profiles | TBD | ⏳ Pending |
+| Skills Catalog | TBD | ⏳ Pending |
+| Project Discovery | TBD | ⏳ Pending |
+| Skill Matching | TBD | ⏳ Pending |
+| Collaboration Comments | TBD | ⏳ Pending |
+| Notifications | TBD | ⏳ Pending |
+| Certificates | TBD | ⏳ Pending |
+| Administration And Moderation | TBD | ⏳ Pending |
+
+`03-functional-requirements.md` should remain the index for this phase. Module-level tracking should stay here unless the tracker becomes too large to review comfortably.
 
 ---
 
@@ -106,6 +132,11 @@ specs/
 ├── 01-scope-and-mvp.md
 ├── 02-roles-and-permissions.md
 ├── 03-functional-requirements.md
+├── functional-requirements/
+│   ├── 01-project-lifecycle.md
+│   ├── 02-deliverables.md
+│   ├── 03-applications-and-assignment.md
+│   └── 04-ngo-verification.md
 ├── 04-domain-model.md
 ├── 05-user-flows.md
 ├── 06-ui-structure.md
@@ -173,7 +204,9 @@ Question answered:
 
 ## 03-functional-requirements.md
 
-Defines:
+Defines the functional requirements index and links to focused module documents under `functional-requirements/`.
+
+Module documents define:
 
 * Functional modules
 * Business rules

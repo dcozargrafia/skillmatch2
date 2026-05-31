@@ -32,9 +32,9 @@ This ensures consistency in matching, reporting, and search functionality.
 
 ## Projects Must Be Structured Around Deliverables
 
-Every project must define one or more expected deliverables.
+Every project must define at least one mandatory deliverable and may define optional deliverables.
 
-Project completion is determined by the successful delivery and approval of all required deliverables.
+Project completion is determined by the successful delivery and approval of all mandatory deliverables.
 
 ---
 
@@ -174,7 +174,7 @@ The MVP must support the complete lifecycle of a collaboration between a contrib
 * Define required skills
 * Define estimated effort
 * Define target completion date
-* Define deliverables
+* Define mandatory and optional deliverables
 
 ---
 
@@ -193,6 +193,7 @@ The MVP must support the complete lifecycle of a collaboration between a contrib
 * Withdraw application
 * View submitted applications
 * NGO application review
+* Reject application
 
 ---
 
@@ -207,7 +208,7 @@ The MVP must support the complete lifecycle of a collaboration between a contrib
 ## Project Assignment
 
 * Assign contributor to project
-* Start project
+* Automatically start project when a contributor is assigned
 * Project progress tracking through deliverables
 
 ---
