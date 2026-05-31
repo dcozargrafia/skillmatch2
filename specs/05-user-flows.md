@@ -487,7 +487,7 @@ A project is removed from active workflows while preserving history.
 
 | Object | From | To |
 | ------ | ---- | -- |
-| Project | Draft, Published, or In Progress | Archived |
+| Project | Draft, Published, In Progress, or Completed | Archived |
 
 ### Notifications And Activity
 
@@ -599,7 +599,7 @@ An administrator performs exceptional governance action without replacing normal
 | Account | Active | Disabled |
 | Account | Disabled | Active |
 | Certificate | Issued | Revoked |
-| Project | Draft, Published, or In Progress | Archived |
+| Project | Draft, Published, In Progress, or Completed | Archived |
 | Comment | Visible | Hidden or moderated |
 
 ### Notifications And Activity
@@ -607,6 +607,45 @@ An administrator performs exceptional governance action without replacing normal
 * Affected users should be notified when administrative action changes access, visibility, workflow state, collaboration records, or certificate validity.
 * Administrative actions requiring reasons must be recorded in administrative activity history.
 * Administrative records should include actor, action, target context, timestamp, reason when required, and outcome.
+
+---
+
+## Flow 14: Notification Review And Archival
+
+### Goal
+
+A user becomes aware of important workflow events without changing the underlying workflow state.
+
+### Main Flow
+
+1. A workflow, governance, or collaboration event creates a recipient-specific Notification.
+2. Notification state starts as Unread.
+3. Recipient opens or marks the Notification as read.
+4. Notification state changes to Read.
+5. Recipient may archive or clear the Notification from active notification views.
+6. Notification state changes to Archived.
+
+### Rules
+
+* Notifications belong to one recipient account.
+* Reading or archiving a Notification must not change Project, Application, Deliverable, Certificate, Verification, or Account state.
+* Reading or archiving a Notification must not delete Activity Records.
+* Notifications must not expose unauthorized private information if the underlying object becomes unavailable.
+* MVP notifications are in-platform only.
+
+### State Changes
+
+| Object | From | To |
+| ------ | ---- | -- |
+| Notification | None | Unread |
+| Notification | Unread | Read |
+| Notification | Read | Archived |
+| Notification | Unread | Archived |
+
+### Notifications And Activity
+
+* Notification state changes do not need to notify the same recipient again.
+* Notification read or archive actions do not replace activity history.
 
 ---
 
@@ -631,7 +670,7 @@ The following rules apply across all user flows:
 Before this document is considered complete, verify that:
 
 * The primary happy path covers the full SkillMatch collaboration lifecycle.
-* Every major Project, Application, Deliverable, Verification, Skill, Certificate, Account, and governance state appears in at least one flow.
+* Every major Project, Application, Deliverable, Verification, Skill, Certificate, Account, Notification, and governance state appears in at least one flow.
 * Notifications appear only where they support relevant workflow awareness.
 * Activity history appears where traceability is required.
 * Compatibility Assessment remains assistive and label-based for users.
