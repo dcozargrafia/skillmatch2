@@ -428,11 +428,16 @@ Minimum expectations:
 * Domain rules tested near the domain/application layer.
 * Use cases tested for valid and invalid transitions.
 * API endpoints tested for authorization and visibility.
+* Contract expectations between frontend and backend should be tested where UI depends on shared API behavior.
 * Frontend workflows tested for critical user journeys.
 * Reusable components tested for important accessibility and state behavior.
 * End-to-end tests reserved for high-value complete flows.
 
 Critical flows should not rely only on manual testing.
+
+### Spec-First Test Planning
+
+Before implementing a feature or slice, the developer or agent should identify behavior groups, test-worthy risks, the cheapest useful test layer for each risk, and the minimum useful test set.
 
 ### Testing Gate Rules
 
@@ -447,6 +452,21 @@ Rules:
 * Accessibility-impacting shared component changes require accessibility-oriented verification where tooling allows.
 * If an automated test is not practical yet, the implementation note must explain why and describe manual verification.
 * No phase should be considered complete if critical flows rely only on manual testing.
+* Tests should assert behavior and business outcomes instead of implementation details.
+* Large AI-generated test suites require a behavior-group plan and justification before acceptance.
+* Test count alone must not be used as evidence of quality.
+* Every fixed bug requires at least one regression test at the lowest useful layer unless explicitly justified.
+
+### AI Test Review Rules
+
+When agents generate tests, reviewers should verify:
+
+* The tests map to specification rules or real regression risks.
+* The tests use the smallest useful layer.
+* The tests do not duplicate the same behavior across layers without reason.
+* The tests do not mostly assert mocks, internal calls, or framework wiring.
+* The test volume is proportional to the implementation slice.
+* Test count is treated as a review signal, not a goal.
 
 ---
 

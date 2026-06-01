@@ -295,6 +295,8 @@ Requirements:
 
 The system should be designed so important behavior can be tested without relying only on end-to-end tests.
 
+Testing should protect observable behavior, business outcomes, contracts, and boundaries rather than implementation details.
+
 Requirements:
 
 * Domain rules and application use cases should be testable independently of framework and infrastructure details.
@@ -304,8 +306,28 @@ Requirements:
 * Reusable UI components should be testable without requiring complete product workflows.
 * Time-dependent behavior should be isolated enough to test deterministically.
 * API contracts should be testable against expected authorization, validation, and state-transition behavior.
+* Frontend/backend contract expectations should be testable where shared API behavior is relied on by the UI.
 * Internationalized UI should be testable without relying on hardcoded visible strings where that would make tests fragile.
 * Accessibility expectations for shared UI components should be testable where tooling allows.
+* Tests should avoid asserting internal implementation details unless the detail is an explicit boundary contract.
+* Test volume should remain proportional to behavioral risk; large generated suites require justification.
+
+### Testing Value Rules
+
+Tests should be added because they protect meaningful behavior, not because they increase test count.
+
+Requirements:
+
+* Each test should map to a business rule, permission boundary, workflow transition, data integrity constraint, regression risk, accessibility/i18n requirement, API contract, or high-value user journey.
+* Tests should avoid trivial getters, setters, constructors, simple DTOs, framework wiring, and implementation-only call assertions unless real logic or boundary behavior exists.
+* The same scenario should not be duplicated across multiple layers unless the workflow is critical.
+* If a test would fail after a harmless internal refactor that preserves behavior, it is probably too coupled to implementation.
+* Test count is a review signal, not a goal.
+* A small number of strong behavior tests is preferable to a larger number of weak implementation tests.
+
+### Spec-First Test Planning
+
+Before implementation, each feature or slice should identify behavior groups, test-worthy risks, the cheapest useful test layer, and the minimum useful test set.
 
 ### Testing Layers
 
@@ -316,6 +338,7 @@ Testing should use the smallest useful test type for each risk.
 | Domain tests | Validate business invariants and state rules without framework or database coupling. |
 | Application/use-case tests | Validate workflow orchestration, authorization decisions, side effects, and invalid transitions. |
 | API tests | Validate request/response behavior, visibility, validation, and protected operations. |
+| Contract tests | Validate shared API expectations between frontend and backend. |
 | Component tests | Validate reusable UI behavior, accessibility expectations, and presentation states. |
 | Workflow tests | Validate critical frontend user flows across product areas. |
 | End-to-end tests | Validate a small number of high-value complete journeys. |
@@ -342,6 +365,18 @@ Requirements:
 * Tests should cover missing or optional contributor skills because skills are not required for applying.
 * Tests should cover rejected NGO verification and rejected deliverable states without reintroducing rejected application state.
 * Tests should cover authorization failures without leaking private resource existence.
+* Every fixed bug should include a regression test at the lowest useful layer unless explicitly justified.
+
+### AI-Generated Test Guardrails
+
+AI-generated tests require extra review discipline.
+
+Requirements:
+
+* Agents should propose behavior groups and risks before generating large test suites.
+* Large test suites must explain why the volume is necessary and why lower-layer tests cannot cover the same risk.
+* Low-value generated tests should be removed rather than maintained for coverage statistics.
+* Test suites should remain readable, maintainable, and useful during refactoring.
 
 ---
 
