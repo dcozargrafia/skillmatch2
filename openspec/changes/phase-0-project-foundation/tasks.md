@@ -38,11 +38,11 @@ Chain strategy: stacked-to-main
 
 ## Phase 3: Web Skeleton / Deployment
 
-- [ ] 3.1 Create `apps/web/package.json`, `apps/web/vite.config.ts`, `apps/web/tsconfig.json`, `apps/web/index.html`, `apps/web/src/main.tsx`, and `apps/web/src/app/App.tsx`.
-- [ ] 3.2 Add `apps/web/src/areas/{public,contributor,ngo,admin}/`, `apps/web/src/shared/{ui,i18n,api}/`, Ant wrapper + `I18nextProvider` scaffolding, and `en/es/fr` resource files.
-- [ ] 3.3 Add `apps/web/tests/app.test.tsx`, `docker/docker-compose.yml`, and `docs/local-development.md` with Coolify-compatible build/start assumptions.
+- [x] 3.1 Create `apps/web/package.json`, `apps/web/vite.config.ts`, `apps/web/tsconfig.json`, `apps/web/index.html`, `apps/web/src/main.tsx`, and `apps/web/src/app/App.tsx`.
+- [x] 3.2 Add `apps/web/src/areas/{public,contributor,ngo,admin}/`, `apps/web/src/shared/{ui,i18n,api}/`, Ant wrapper + `I18nextProvider` scaffolding, and `en/es/fr` resource files.
+- [x] 3.3 Add `apps/web/tests/app.test.tsx`, `docker/docker-compose.yml`, and `docs/local-development.md` with Coolify-compatible build/start assumptions.
 
 ## Phase 4: Verification / Cleanup
 
-- [ ] 4.1 Run and fix root/app `format`, `lint`, `typecheck`, `test`, and `build` commands until baseline checks pass.
-- [ ] 4.2 Audit `apps/api/src/modules/` and `apps/web/src/areas/` to confirm only Phase 0 placeholders exist; remove any accidental auth/profile/project/application/deliverable/notification/certificate/admin behavior.
+- [x] 4.1 Run and fix root/app `format`, `lint`, `typecheck`, `test`, and `build` commands until baseline checks pass.
+- [x] 4.2 Audit `apps/api/src/modules/` and `apps/web/src/areas/` to confirm only Phase 0 placeholders exist; remove any accidental auth/profile/project/application/deliverable/notification/certificate/admin behavior.
