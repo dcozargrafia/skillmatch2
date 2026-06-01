@@ -398,16 +398,20 @@ What was decided?
 
 What are the tradeoffs and implications?
 
-Examples:
+Current ADRs:
 
-```text
-0001-tech-stack.md
-0002-frontend-architecture.md
-0003-backend-architecture.md
-0004-auth-strategy.md
-0005-certificate-generation.md
-0006-notification-system.md
-```
+| ADR | Decision | Status |
+| --- | -------- | ------ |
+| `adr/0001-repository-strategy.md` | Monorepo for MVP, with separability by design. | Accepted |
+| `adr/0002-backend-framework-runtime.md` | Node.js + TypeScript + Fastify for the backend/API. | Accepted |
+| `adr/0003-frontend-framework-runtime.md` | React + TypeScript + Vite for the frontend. | Accepted |
+| `adr/0004-database-and-persistence.md` | PostgreSQL + Prisma, with Prisma isolated behind infrastructure adapters. | Accepted |
+| `adr/0005-testing-strategy-and-tooling.md` | Risk-based, behavior-focused testing with Vitest-centered tooling. | Accepted |
+| `adr/0006-authentication-and-session-strategy.md` | First-party email/password authentication with opaque server-side cookie sessions. | Accepted |
+| `adr/0007-ui-component-library-and-design-system-wrapper-strategy.md` | Layered component strategy with application-owned UI wrappers. | Accepted |
+| `adr/0008-ui-component-library.md` | Ant Design as the base UI library, consumed through wrappers and tokens. | Accepted |
+| `adr/0009-internationalization-implementation-approach.md` | i18next + react-i18next with English, Spanish, and French from day one. | Accepted |
+| `adr/0010-deployment-and-hosting-approach.md` | Axarnet VPS + Coolify for MVP deployment and hosting. | Accepted |
 
 ---
 
