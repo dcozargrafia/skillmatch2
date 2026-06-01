@@ -178,6 +178,14 @@ pnpm test
 pnpm build
 ```
 
+When using RTK token-saving wrappers, wrap the project command explicitly:
+
+```bash
+rtk pnpm lint
+```
+
+Do not use `rtk lint` for this repository. That RTK shortcut targets ESLint-style linting, while SkillMatch uses Biome through the `pnpm lint` script.
+
 ### Environment files
 
 Copy and adapt these examples for local use:
