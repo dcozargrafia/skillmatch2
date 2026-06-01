@@ -32,9 +32,9 @@ Chain strategy: stacked-to-main
 
 ## Phase 2: API Skeleton
 
-- [ ] 2.1 Create `apps/api/package.json`, `apps/api/tsconfig.json`, `apps/api/vitest.config.ts`, `apps/api/src/main.ts`, and `apps/api/src/http/health-route.ts`.
-- [ ] 2.2 Add placeholder folders under `apps/api/src/modules/`, `apps/api/src/infrastructure/`, `apps/api/src/shared/`, and `apps/api/prisma/` with no product logic or Prisma leakage.
-- [ ] 2.3 Add `apps/api/tests/health.test.ts` using Fastify `inject` to verify `GET /health` only.
+- [x] 2.1 Create `apps/api/package.json`, `apps/api/tsconfig.json`, `apps/api/vitest.config.ts`, `apps/api/src/main.ts`, and `apps/api/src/http/health-route.ts`.
+- [x] 2.2 Add placeholder folders under `apps/api/src/modules/`, `apps/api/src/infrastructure/`, `apps/api/src/shared/`, and `apps/api/prisma/` with no product logic or Prisma leakage.
+- [x] 2.3 Add `apps/api/tests/health.test.ts` using Fastify `inject` to verify `GET /health` only.
 
 ## Phase 3: Web Skeleton / Deployment
 
