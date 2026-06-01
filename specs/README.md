@@ -26,7 +26,8 @@ The specification is the source of truth for all product, design, architecture, 
 | 09-architecture.md                | ✅ Complete |
 | 10-non-functional-requirements.md | ✅ Complete |
 | 11-sdd-execution-plan.md          | ✅ Complete |
-| ADRs                              | 📝 Started  |
+| ADR baseline                      | ✅ Complete |
+| 12-phase-0-project-foundation.md  | ✅ Complete |
 
 ---
 
@@ -155,7 +156,8 @@ specs/
 ├── 09-architecture.md
 ├── 10-non-functional-requirements.md
 ├── 11-sdd-execution-plan.md
-└── adr/
+├── adr/
+└── 12-phase-0-project-foundation.md
 ```
 
 ---
@@ -380,6 +382,22 @@ Question answered:
 
 ---
 
+## 12-phase-0-project-foundation.md
+
+Defines:
+
+* Initial monorepo foundation
+* Workspace and tooling expectations
+* Backend and frontend skeleton boundaries
+* Testing foundation
+* Environment and deployment-readiness rules
+
+Question answered:
+
+> What must exist before product implementation starts?
+
+---
+
 # Architecture Decision Records (ADRs)
 
 ADRs document important technical decisions.
@@ -457,6 +475,7 @@ Before marking any document as complete:
 ## Architecture Decisions
 
 13. ADRs
+14. 12-phase-0-project-foundation.md
 
 ---
 
