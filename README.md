@@ -4,7 +4,7 @@
 
 SkillMatch is an open-source platform that connects people with digital skills and nonprofit organizations through focused technology micro-projects.
 
-The project is currently in the specification phase. The specification is the source of truth until implementation begins.
+The project is in Phase 0 (Project Foundation). Specifications and ADRs remain the source of truth while the initial monorepo/tooling baseline is being implemented.
 
 ---
 
@@ -82,13 +82,12 @@ Completed specification areas:
 - User flows
 - UI structure
 
-Next specification areas:
+Phase 0 focus:
 
-- API specification
-- Data model
-- Architecture
-- Non-functional requirements
-- SDD execution plan
+- Monorepo structure and workspace scripts
+- Shared/config package stubs
+- Baseline quality gates (`format`, `lint`, `typecheck`, `test`, `build`)
+- Environment examples without secrets
 
 See [`specs/README.md`](specs/README.md) for the full specification tracker.
 
@@ -147,13 +146,59 @@ Implementation must follow the approved specification rather than inventing beha
 
 ---
 
+## Local development (Phase 0)
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 9+
+
+### Clone and install
+
+```bash
+git clone <repository-url>
+cd skillmatch2
+pnpm install
+```
+
+### Workspace commands
+
+Use `format` to rewrite files with the project formatter:
+
+```bash
+pnpm format
+```
+
+Use these commands as verification gates:
+
+```bash
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+```
+
+When using RTK token-saving wrappers, wrap the project command explicitly:
+
+```bash
+rtk pnpm lint
+```
+
+Do not use `rtk lint` for this repository. That RTK shortcut targets ESLint-style linting, while SkillMatch uses Biome through the `pnpm lint` script.
+
+### Environment files
+
+Copy and adapt these examples for local use:
+
+- `.env.example`
+- `apps/api/.env.example`
+- `apps/web/.env.example`
+
+Do not commit secrets. Use local `.env` files only.
+
 ## Contributing
 
-The project is not ready for code contributions yet.
-
-For now, useful contributions are specification review, consistency checks, domain modeling, and product-rule clarification.
-
-When implementation begins, contribution guidelines will be added here.
+Contributions should follow SDD and AGENTS.md rules. During Phase 0, keep changes foundation-only and avoid product workflow implementation.
 
 ---
 
