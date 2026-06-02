@@ -18,11 +18,13 @@ Before changing anything:
    git status --short
    ```
 
-2. Read the relevant specification before editing code or docs.
-3. Read the relevant ADR before making technical choices.
-4. Keep the change small, reviewable, and aligned with the current phase.
-5. Save important decisions, discoveries, and bug fixes to Engram when available.
-6. Commit only coherent work units using conventional commits.
+2. Read `docs/implementation-progress.md` to confirm the active phase and next recommended action.
+3. Read the relevant specification before editing code or docs.
+4. Read the relevant ADR before making technical choices.
+5. Keep the change small, reviewable, and aligned with the current phase.
+6. Update `docs/implementation-progress.md` when a phase, PR, or meaningful implementation slice completes.
+7. Save important decisions, discoveries, and bug fixes to Engram when available.
+8. Commit only coherent work units using conventional commits.
 
 If a request conflicts with the specs, raise the conflict instead of inventing behavior.
 
@@ -32,27 +34,27 @@ RTK note: use the project scripts as the source of truth. For linting, prefer `p
 
 ## Current Project State
 
-The product and technical specification baseline is complete enough to start Phase 0 implementation.
+Phase 0 is complete, verified, archived, and merged. The repository is ready to plan Phase 1 implementation.
 
 Current phase:
 
 ```text
-Phase 0: Project Foundation
+Phase 1: Core Platform Foundation
 ```
 
 Primary current document:
 
 ```text
-specs/12-phase-0-project-foundation.md
+docs/implementation-progress.md
 ```
 
-Phase 0 goal:
+Phase 1 goal:
 
 ```text
-Create the repository, tooling, testing, environment, and app skeleton foundation before product workflows are implemented.
+Implement identity, account state, roles, and authorization foundations before protected product workflows depend on them.
 ```
 
-Phase 0 must not implement product features such as authentication, profiles, projects, applications, deliverables, notifications, certificates, or admin workflows.
+Phase 1 should implement only the core platform foundation. It must not implement profiles, NGO verification, projects, applications, deliverables, notifications, certificates, or broad admin workflows beyond the provisioning approach required for account administration.
 
 ---
 
