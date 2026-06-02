@@ -19,12 +19,13 @@ Before changing anything:
    ```
 
 2. Read `docs/implementation-progress.md` to confirm the active phase and next recommended action.
-3. Read the relevant specification before editing code or docs.
-4. Read the relevant ADR before making technical choices.
-5. Keep the change small, reviewable, and aligned with the current phase.
-6. Update `docs/implementation-progress.md` when a phase, PR, or meaningful implementation slice completes.
-7. Save important decisions, discoveries, and bug fixes to Engram when available.
-8. Commit only coherent work units using conventional commits.
+3. Read `docs/implementation-guide.md` for the coding and implementation conventions.
+4. Read the relevant specification before editing code or docs.
+5. Read the relevant ADR before making technical choices.
+6. Keep the change small, reviewable, and aligned with the current phase.
+7. Update `docs/implementation-progress.md` when a phase, PR, or meaningful implementation slice completes.
+8. Save important decisions, discoveries, and bug fixes to Engram when available.
+9. Commit only coherent work units using conventional commits.
 
 If a request conflicts with the specs, raise the conflict instead of inventing behavior.
 

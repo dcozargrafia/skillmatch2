@@ -196,7 +196,13 @@ Do not commit secrets. Use local `.env` files only.
 
 ## Contributing
 
-Contributions should follow SDD and AGENTS.md rules. During Phase 0, keep changes foundation-only and avoid product workflow implementation.
+Contributions should follow SDD and `AGENTS.md` rules.
+
+Read these before implementation work:
+
+- `docs/implementation-progress.md`
+- `docs/implementation-guide.md`
+- relevant specs and ADRs in `specs/`
 
 ---
 
