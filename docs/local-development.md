@@ -37,6 +37,7 @@ pnpm --filter @skillmatch/web dev
 ## Baseline quality gates
 
 ```bash
+pnpm format
 pnpm lint
 pnpm typecheck
 pnpm test

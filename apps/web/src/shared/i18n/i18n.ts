@@ -8,13 +8,13 @@ void i18n.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     es: { translation: es },
-    fr: { translation: fr }
+    fr: { translation: fr },
   },
   fallbackLng: "en",
   lng: "en",
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 });
 
 export { i18n };

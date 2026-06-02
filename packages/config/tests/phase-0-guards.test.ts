@@ -1,4 +1,12 @@
-import { mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import {
+  mkdirSync,
+  mkdtempSync,
+  readdirSync,
+  readFileSync,
+  rmSync,
+  statSync,
+  writeFileSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, extname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -14,7 +22,7 @@ const ignoredDirectories = new Set([
   "coverage",
   ".git",
   ".pnpm-store",
-  "openspec"
+  "openspec",
 ]);
 
 const forbiddenPhaseOnePatterns = [
@@ -27,7 +35,7 @@ const forbiddenPhaseOnePatterns = [
   /\bprojectApplication\b/i,
   /\bdeliverable\b/i,
   /\bnotification\b/i,
-  /\bcertificate\b/i
+  /\bcertificate\b/i,
 ];
 
 function listFilesRecursively(directoryPath: string): string[] {
@@ -58,8 +66,12 @@ function normalizePath(path: string): string {
 
 function extractImportSpecifiers(content: string): string[] {
   const namedImports = [...content.matchAll(/from\s+["']([^"']+)["']/g)].map((match) => match[1]);
-  const sideEffectImports = [...content.matchAll(/import\s+["']([^"']+)["']/g)].map((match) => match[1]);
-  const dynamicImports = [...content.matchAll(/import\(\s*["']([^"']+)["']\s*\)/g)].map((match) => match[1]);
+  const sideEffectImports = [...content.matchAll(/import\s+["']([^"']+)["']/g)].map(
+    (match) => match[1],
+  );
+  const dynamicImports = [...content.matchAll(/import\(\s*["']([^"']+)["']\s*\)/g)].map(
+    (match) => match[1],
+  );
 
   return [...namedImports, ...sideEffectImports, ...dynamicImports];
 }
@@ -87,7 +99,11 @@ function fileContainsForbiddenCrossImport(filePath: string): string[] {
   const isSharedPackage = normalizedFilePath.includes("/packages/");
 
   if (isFrontend) {
-    if (importSpecifiers.some((specifier) => specifier.includes("apps/api") || isApiSpecifier(specifier))) {
+    if (
+      importSpecifiers.some(
+        (specifier) => specifier.includes("apps/api") || isApiSpecifier(specifier),
+      )
+    ) {
       violations.push("frontend imports backend package/internal path");
     }
     if (relativeImports.some((specifier) => specifier.includes("/apps/api/"))) {
@@ -96,7 +112,11 @@ function fileContainsForbiddenCrossImport(filePath: string): string[] {
   }
 
   if (isBackend) {
-    if (importSpecifiers.some((specifier) => specifier.includes("apps/web") || isWebSpecifier(specifier))) {
+    if (
+      importSpecifiers.some(
+        (specifier) => specifier.includes("apps/web") || isWebSpecifier(specifier),
+      )
+    ) {
       violations.push("backend imports frontend package/internal path");
     }
     if (relativeImports.some((specifier) => specifier.includes("/apps/web/"))) {
@@ -111,14 +131,14 @@ function fileContainsForbiddenCrossImport(filePath: string): string[] {
           specifier.includes("apps/api") ||
           specifier.includes("apps/web") ||
           isApiSpecifier(specifier) ||
-          isWebSpecifier(specifier)
+          isWebSpecifier(specifier),
       )
     ) {
       violations.push("shared package imports app internals by specifier");
     }
     if (
       relativeImports.some(
-        (specifier) => specifier.includes("/apps/api/") || specifier.includes("/apps/web/")
+        (specifier) => specifier.includes("/apps/api/") || specifier.includes("/apps/web/"),
       )
     ) {
       violations.push("shared package relative import resolves to app internals");
@@ -137,7 +157,7 @@ describe("Phase 0 architecture and scope guards", () => {
 
     writeFileSync(
       webFile,
-      'import { createApp } from "@skillmatch/api";\nimport "@skillmatch/api/internal";\nawait import("@skillmatch/api/runtime");\n'
+      'import { createApp } from "@skillmatch/api";\nimport "@skillmatch/api/internal";\nawait import("@skillmatch/api/runtime");\n',
     );
 
     try {
@@ -156,7 +176,7 @@ describe("Phase 0 architecture and scope guards", () => {
 
     writeFileSync(
       apiFile,
-      'import { App } from "@skillmatch/web";\nimport "@skillmatch/web/internal";\nawait import("@skillmatch/web/runtime");\n'
+      'import { App } from "@skillmatch/web";\nimport "@skillmatch/web/internal";\nawait import("@skillmatch/web/runtime");\n',
     );
 
     try {
@@ -175,7 +195,7 @@ describe("Phase 0 architecture and scope guards", () => {
 
     writeFileSync(
       sharedFile,
-      'import { createApp } from "@skillmatch/api";\nimport "@skillmatch/api/internal";\nimport { App } from "@skillmatch/web";\nawait import("@skillmatch/web/runtime");\n'
+      'import { createApp } from "@skillmatch/api";\nimport "@skillmatch/api/internal";\nimport { App } from "@skillmatch/web";\nawait import("@skillmatch/web/runtime");\n',
     );
 
     try {
@@ -196,7 +216,9 @@ describe("Phase 0 architecture and scope guards", () => {
 
     try {
       const content = readFileSync(apiFile, "utf8");
-      const hasForbiddenPattern = forbiddenPhaseOnePatterns.some((pattern) => pattern.test(content));
+      const hasForbiddenPattern = forbiddenPhaseOnePatterns.some((pattern) =>
+        pattern.test(content),
+      );
       expect(hasForbiddenPattern).toBe(true);
     } finally {
       rmSync(fixtureRoot, { recursive: true, force: true });
@@ -227,7 +249,7 @@ describe("Phase 0 architecture and scope guards", () => {
       resolve(repoRoot, "apps/web/src/areas/public"),
       resolve(repoRoot, "apps/web/src/areas/contributor"),
       resolve(repoRoot, "apps/web/src/areas/ngo"),
-      resolve(repoRoot, "apps/web/src/areas/admin")
+      resolve(repoRoot, "apps/web/src/areas/admin"),
     ];
 
     const violations: string[] = [];
@@ -256,7 +278,9 @@ describe("Phase 0 architecture and scope guards", () => {
       const content = readFileSync(filePath, "utf8");
       for (const pattern of forbiddenPhaseOnePatterns) {
         if (pattern.test(content)) {
-          violations.push(`${normalizePath(filePath)} -> matches forbidden phase 1+ pattern ${pattern}`);
+          violations.push(
+            `${normalizePath(filePath)} -> matches forbidden phase 1+ pattern ${pattern}`,
+          );
         }
       }
     }
