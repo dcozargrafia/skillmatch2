@@ -26,7 +26,7 @@ Before changing anything:
 
 If a request conflicts with the specs, raise the conflict instead of inventing behavior.
 
-RTK note: this repository uses Biome via `pnpm lint`. If using RTK wrappers, run `rtk pnpm lint`, not `rtk lint`; the latter targets ESLint-style linting and can emit a misleading abnormal-termination warning.
+RTK note: use the project scripts as the source of truth. For linting, prefer `pnpm lint` or `rtk pnpm lint`; the repository uses ESLint through the root package script.
 
 ---
 

@@ -163,13 +163,13 @@ pnpm install
 
 ### Workspace commands
 
-Use `format` to rewrite files with the project formatter:
+Use `format` to rewrite files with Prettier:
 
 ```bash
 pnpm format
 ```
 
-Use these commands as verification gates:
+Use ESLint for linting and these commands as verification gates:
 
 ```bash
 pnpm lint
@@ -183,8 +183,6 @@ When using RTK token-saving wrappers, wrap the project command explicitly:
 ```bash
 rtk pnpm lint
 ```
-
-Do not use `rtk lint` for this repository. That RTK shortcut targets ESLint-style linting, while SkillMatch uses Biome through the `pnpm lint` script.
 
 ### Environment files
 

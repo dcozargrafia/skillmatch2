@@ -7,7 +7,7 @@ describe("health route", () => {
     const app = createApp();
     const response = await app.inject({
       method: "GET",
-      url: "/health"
+      url: "/health",
     });
 
     expect(response.statusCode).toBe(200);

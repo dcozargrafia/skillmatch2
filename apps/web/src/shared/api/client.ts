@@ -15,5 +15,5 @@ export const resolveApiBaseUrl = (environment: ApiEnvironment = import.meta.env)
 };
 
 export const createApiClient = (environment: ApiEnvironment = import.meta.env) => ({
-  baseUrl: resolveApiBaseUrl(environment)
+  baseUrl: resolveApiBaseUrl(environment),
 });
