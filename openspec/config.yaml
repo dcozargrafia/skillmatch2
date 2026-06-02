@@ -3,18 +3,18 @@ schema: spec-driven
 
 context: |
   Project: SkillMatch
-  Phase: Functional Specification — ALL spec documents complete (00-12 inclusive). All 10 ADRs accepted.
-  Stack: Planned via ADRs (pre-implementation). Backend: Node.js/TypeScript/Fastify. Frontend: React/TypeScript/Vite. Database: PostgreSQL/Prisma. Monorepo: pnpm workspaces.
-  Testing: Vitest designated per ADR 0005 (not yet installed). React Testing Library for frontend. Playwright for E2E.
+  Phase: Phase 0 Project Foundation implemented and archived; ready for the next SDD change from the foundation baseline. All 11 ADRs accepted.
+  Stack: Implemented Phase 0 foundation. Backend: Node.js/TypeScript/Fastify. Frontend: React/TypeScript/Vite. Database: PostgreSQL/Prisma planned behind infrastructure adapters. Monorepo: pnpm workspaces.
+  Testing: Vitest installed for Phase 0. React Testing Library installed for frontend testing. Playwright remains planned for E2E.
   Architecture: Clean/Hexagonal modular monolith backend. Product-area-organized frontend. Ant Design via wrapper layer.
   Conventions: SDD workflow active per AGENTS.md. `specs/` is source of truth. All ADRs in `specs/adr/`.
 
 strict_tdd: false
-strict_tdd_reason: "No test runner installed yet (pre-implementation). ADR 0005 designates Vitest once Phase 0 begins."
+strict_tdd_reason: "Phase 0 uses verification gates and smoke coverage rather than strict TDD for every foundation file."
 
 testing:
   runner: vitest
-  runner_status: designated_in_adr_0005
+  runner_status: installed_in_phase_0
   layers:
     unit: "Domain/use-case tests — Vitest"
     integration: "API tests via Vitest + Fastify inject; Persistence via Vitest + Prisma + PostgreSQL"
